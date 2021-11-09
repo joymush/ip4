@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#D58E3C">
+
+    <title>Eunisans' pizza!</title>
+    <link rel="stylesheet" href="Css/bootsrap.css">
+    <link rel="stylesheet" href="Css/script.css">
+    <link rel="shortcut icon" href="Images/logo.jpeg" type="image/png" sizes="192*192">
+    <link rel="stylesheet" href="assets/responsive.css">
+</head>
+
+<body>
+    <div class="head">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <a href="index.html" class="navbar-brand">
+                <div class="logo"><img class="imgl" src="images/logo.jpeg" alt="logo"
+            </a>
+     </div>
+     <button class="nav-bar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+         <span class="nav-bar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ml-auto ull ">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item active">
+                <a href="menu.html" class="nav-link">MENU</a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">ABOUT US</a>
+            </li>
+            <li class="nav-item ">
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+</div>
+
+<header>EUNISANS' PIZZAS</header>
+<div class="shoulder">
+    <div class="grid-container">
+
+     <div class="grid-child toppings-container">
+         <div class="toppings-head">ADD TOPPINGS</div>
+         <div class="toppings-genres">
+          <div class="toppings-genre active" onclick="openGenre(event, 'veg')">VEG</div>
+          <div class="toppings-genre" onclick="openGenre(event, 'non')">NON VEG</div>
+         </div>
+         <div class="toppings-body">
+          <div class="toppings-body-veg toppings-body-child active-genre">
+              <div class="topping" title="ksh13">
+
+                <span>MUSHROOM</span>
+              </div>
+              <div class="topping" title="ksh30">
+
+                <span>ONION</span>
+              </div>
+              <div class="topping" title="ksh45">
+
+                <span>PANEER</span>
+              </div>
+              <div class="topping" title="ksh23">
+
+                <span>PAPARIKA</span>
+              </div>
+              <div class="topping" title="ksh23">
+
+                <span>JALAPENO</span>
+          </div>   
+          <div class="topping" title="ksh67">
+
+            <span>GREEN OLIVES</span>
+        </div>
+        <div class="topping" title="ksh34">
+
+            <span>GOLDEN CORN</span>
+        </div>
+        <div class="topping" title="ksh45">
+        
+            <span>CAPSICUM</span>
+        </div>
+    </div>
+    <div class="toppings-body-non toppings-body-child">
+        <div class="topping" title="34">
+
+            <span>PERI PERI CHICKEN</span>
+        </div>
+        <div class="topping" title="ksh56">
+
+            <span>BARBEQUE</span>
+        </div>
+        <div class="topping" title="23">
+        
+            <span>SAUSAGE</span>
+        </div>
+        <div class="topping" title="ksh76">
+
+            <span>CHICKEN TIKKA</span>
+        </div>
+        <div class="topping" title="ksh23">
+
+            <span>GRILLLED CHICKEN RASHIER</span>
+        </div>
+    </div>
+   </div>
+</div>
+
+<!-- THE CRUSTS -->
+<div class="grid-child crust-container">
+    <div class="crust-head">CHOOSE YOUR CRUST</div>
+    <div class="crust-body">
+        <div class="crust selected-crust" title="ksh34">CLASSIC HAND TOSSED</div>
+        <div class="crust" title="ksh23">CHEESE BURST</div>
+        <div class="crust" title="ksh43">WHEAT THIN CRUST</div>
+        <div class="crust" title="ksh34">FRESH PAN</div>
+        <div class="crust" title="ksh43">NEW HAND TOSSED</div>
+    </div>
+</div>
+<!-- THE MONEY $ $ $ -->
+<div class="grid-child bill-container">
+
+ </div>
+</div>
+<div class="bill-extras">
+    <span>Quantity</span>
+    <select name="quality" id="quantity" onclick="updateBill()">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+     
+    <br>
+     </div>
+    <br>
+<div class="cheeselabel">
+<label for="extra-cheese" class="cheese" title="15">Extra cheese
+    <input type="checkbox" name="extra-cheese" id="extra-cheese" onclick="updateBill()">
+    <span class="checkmark" title="ksh15"></span>
+</label>
+</div>
+  <div class="bill">
+      <ul class="bill-list">
+          <li>
+              <span class="bill-label">Total:</span>
+              <span class="bill-value" id="total-cost">ksh34</span>
+          </li>
+          <li>
+              <span class="bill-label">Extra Toppings:</span>
+              <span class="bill-value" id="toppings-cost">ksh0</span>
+          </li>
+          <li>
+              <span class="bill-label">Extra Cheese:</span>
+              <span class="bill-value" id="cheese-cost">ksh0</span>
+          </li>
+          <li>
+              <span class="bill-label">VAT:</span>
+              <span class="bill-value" id="gst-cost">ksh0</span>
+          </li>
+          <li class="grand-total">
+              <span class="bill-value">Grand Total:</span>
+              <span class="bill-value" id="grand-cost">ksh34</span>
+          </li>
+        </ul>
+    </div>
+    <div id="buy-now" onclick="fb()">
+        <a><span>Buy Now</span></a>
+    </div>
+    <br>
+    <br>
+    <button onclick="bb()" name="Delivery" class="two"> Delivery </button>
+    <div class="mapp">
+        <div class="mapouter">
+            <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas"
+                src="https://maps.google.com/maps?q=nairobi&t=&z=13&ie=UTF8&iwloc=output=embed" frameborder="0"
+                scrolling="no" marginheight="0" marginheight="0" marginwidth="0"></iframe>Google Maps Generator by <a
+                href="https://www.embedgooglemap.net">embedgooglemap.net</a></div>
+            </style>
+              .mapouter {
+                  position: relative;
+                  text-align: right;
+                  height: 500px;
+                  width: 600px;
+              }
+
+              .gmap_canvas {
+                  overflow: hidden;
+                  background: none !important;
+                  height: 500px;
+                  width: 600px;
+              }
+            </style>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>
+
+
+
+
+<script src="script.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6LEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+</body>
+
+</html>
